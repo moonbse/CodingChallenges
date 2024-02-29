@@ -73,6 +73,15 @@ int main(){
         int n;
         cin >> n;
         
+        if(n <= 15){
+           string res = n >= 11 ? "Lower Single" : "Lower Double";
+           cout << res << "\n";
+        }else{
+            string res = n >= 26 ? "Upper Single" : "Upper Double";
+            cout << res << "\n";
+        }
+
+
     }
     
     return 0;
