@@ -64,27 +64,26 @@ char AntiNormal(int x){
     return x + 'a' -1;
 }
 
+bool isPrime(int n){ 
+    if(n < 2)return false;
+    for(int i = 2; i*i <= n; i++){
+        if(n%i == 0)return false;
+    }
+    return true;
+}
 
 int main(){
     fastio;
     int t;
     cin >> t;
     while(t--){
-      int n; 
-      cin >> n;
-     
-      int highestDegree = -1;
-      int curr;
-      int nonZeroDegree = 0;
-      
-      while(n--){
-        cin >> curr;
-        highestDegree++;
-        if(curr != 0) nonZeroDegree = highestDegree;
+       int n;
+       cin >> n;
+       if(isPrime(n))cout << "yes" << "\n";
+       else cout<< "no" << "\n";
 
-      }
-      cout << nonZeroDegree << "\n";
     }
     
     return 0;
 }
+
