@@ -67,13 +67,10 @@ char AntiNormal(int x){
 
 int main(){
     fastio;
-    int t = 1;
-    // cin >> t;
+    int t;
+    cin >> t;
     while(t--){
-        int r, o,c;
-        cin>> r  >> o >> c;
-        string res = ((c + ((20-o)*6)*6) > r ) ? "YES" : "NO";
-        cout << res << "\n";
+
     }
     
     return 0;
