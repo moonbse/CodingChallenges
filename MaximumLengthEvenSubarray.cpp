@@ -70,9 +70,11 @@ int main(){
     int t;
     cin >> t;
     while(t--){
-       int l, r;
-       cin >> l >> r;
-       cout << 2*r - 2*l +1 << "\n";
+       int n; 
+       cin >> n;
+       int n_odds = (n+1)/2;
+       if(n_odds%2 == 0)cout<< n << "\n";
+       else cout << n-1 << "\n";
     }
     
     return 0;

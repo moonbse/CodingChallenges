@@ -70,9 +70,15 @@ int main(){
     int t;
     cin >> t;
     while(t--){
-       int l, r;
-       cin >> l >> r;
-       cout << 2*r - 2*l +1 << "\n";
+       int u, v, a ,s;
+       cin >> u >> v >> a >> s;
+       
+       if(u <= v) cout << "YES" << "\n";
+       else{
+          int vf = sqrt(u*u -2*a*s);
+          if(vf <= v)cout<< "YES" << "\n";
+          else cout << "NO" << "\n";
+       }
     }
     
     return 0;
