@@ -64,13 +64,53 @@ char AntiNormal(int x){
     return x + 'a' -1;
 }
 
+void setRange(std::bitset<100> &myBitset, int start, int end) {
+    for (int i = start; i <= end; ++i) {
+        myBitset.set(i, true);
+    }
+}
+
+// Function to unset a range of bits in a bitmask
+void unsetRange(std::bitset<100> &myBitset, int start, int end) {
+    for (int i = start; i <= end; ++i) {
+        myBitset.set(i, false);
+    }
+}
+
+
+// a more efficient implementation would be to find each pair reachable by a cop
+// and finally merge the ranges and count, 
+
+// for merge: overlapping ranges, not overlapping ranges
+
+// writing custom comparator
 
 int main(){
     fastio;
     int t;
     cin >> t;
     while(t--){
+       int x, y, M;
 
+       cin >> M >> x >> y;
+       vi cops;
+       int dist = x*y;
+      
+       int hn;
+       int minR, maxR;
+      
+       bitset<100> allHouses = 0;
+       
+       forn(M){
+        cin >> hn;
+
+        minR =  max( 1, hn - dist);
+        maxR =  min(100, hn + dist);
+        setRange(allHouses, minR-1, maxR-1);
+       
+       }  
+       cout << 100 - allHouses.count() << "\n";
+       
 
     }
     
