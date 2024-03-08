@@ -35,7 +35,13 @@ void print(T& c){
    }
    cout<< "\n";
 }
-
+// void f(const vector< int >& v) {
+// int r = 0;
+// tr(v, it) {
+// r += (it)(*it);
+// }
+// return r;
+// }
 typedef vector< int > vi;
 typedef pair< int,int > pii;
 typedef vector<string> vs;
@@ -64,25 +70,26 @@ int main(){
     int t;
     cin >> t;
     while(t--){
-       int n; 
-       cin >> n;
-       ll maxS =numeric_limits<int>:: max();
-       int curr = 0;
-       int count = 0;
+        int n;
+        cin >> n;
+        int currFuel = 0;
+        int fi = 0;
+        int dist = 0;
+        cin >> currFuel;
 
-       forn(n){
-          cin >> curr;
+        for(int i = 1; i < n; i++){
+            if(currFuel < 1){
+                while(i < n){cin >> fi; i++;}
+                break;
+            }
+            cin >> fi;
+            currFuel += fi;
+            currFuel--;
+            dist = i;
+        }
 
-          if(curr > maxS){
-            continue;
-          }else if(curr < maxS){
-             maxS = curr;
-             count++;
-          }else{
-            count++;
-          } 
-       }
-       cout << count << "\n";
+       dist += currFuel;
+       cout << dist << "\n";
     }
     
     return 0;
