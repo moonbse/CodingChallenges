@@ -66,6 +66,7 @@ char AntiNormal(int x){
 
 
 int main(){
+    
     fastio;
     int t;
     cin >> t;
