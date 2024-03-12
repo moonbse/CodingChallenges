@@ -70,8 +70,32 @@ int main(){
     fastio;
     int t;
     cin >> t;
-    
+
     while(t--){
+        string s;
+        cin >> s;
+        int i = 0;
+        int j = 2;
+        
+        string resultS = "";
+        cout << s << "\n";
+
+        while(j < s.length()){
+            if(s.substr(i, j+1) == "rty"){
+               i = j+1;
+               j = i+2;
+               resultS.append("wri");
+            }else{
+              resultS.append(to_string(s.at(i)));
+              i++;
+              j++;
+            }
+        }
+        while(i < s.length()){
+            resultS.append(s.substr(i, s.length() - i + 1));
+            i++;
+        }
+        cout << resultS << "\n";
 
     }
     
