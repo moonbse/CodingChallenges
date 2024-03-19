@@ -62,7 +62,7 @@ int Normalise(char x){
 }
 char AntiNormal(int x){
     return x + 'a' -1;
-    
+
 }
 
 
@@ -70,6 +70,7 @@ int main(){
     fastio;
     int t;
     cin >> t;
+    
     while(t--){
 
     }
