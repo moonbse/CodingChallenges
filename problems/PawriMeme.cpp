@@ -69,6 +69,7 @@ int main(){
     fastio;
     int t;
     cin >> t;
+    
     while(t--){
         string s;
         cin >> s;
