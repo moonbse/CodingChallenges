@@ -35,13 +35,8 @@ void print(T& c){
    }
    cout<< "\n";
 }
-// void f(const vector< int >& v) {
-// int r = 0;
-// tr(v, it) {
-// r += (it)(*it);
-// }
-// return r;
-// }
+
+
 typedef vector< int > vi;
 typedef pair< int,int > pii;
 typedef vector<string> vs;
