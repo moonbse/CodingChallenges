@@ -22,6 +22,7 @@ using namespace std;
 
 class Solution {
 public:
+//  dp based solution is called kadame solution
     int maxSubArray(vector<int>& nums) {
         int size = nums.size();
         vector<int> dp(size, 0);
