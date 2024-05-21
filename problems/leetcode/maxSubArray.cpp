@@ -24,6 +24,10 @@ class Solution {
 public:
 //  dp based solution is called kadame solution
 // starting solutions
+
+// Great questions to understand divide and conquer, dp, kadame's algo,
+//  thinking in first principle starting from (On*2) solution >> recursive solution 
+// >> optimizing recursion using memoization >> 2d dp as tabulation >> to 1d DP >> divide and conquer.
     int maxSubArray(vector<int>& nums) {
         int size = nums.size();
         vector<int> dp(size, 0);
