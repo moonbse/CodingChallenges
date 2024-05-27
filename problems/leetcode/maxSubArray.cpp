@@ -28,6 +28,10 @@ public:
 // Great questions to understand divide and conquer, dp, kadame's algo,
 //  thinking in first principle starting from (On*2) solution >> recursive solution 
 // >> optimizing recursion using memoization >> 2d dp as tabulation >> to 1d DP >> divide and conquer.
+
+
+// Kadame's algorithms works only with arrays having both positive and negative numbers, if all are negative 
+// it will return 0;
     int maxSubArray(vector<int>& nums) {
         int size = nums.size();
         vector<int> dp(size, 0);
@@ -42,3 +46,24 @@ public:
 
 
 };
+
+
+
+// golang solution
+
+// func maxSubarraySum(arr []int) int {
+//     currentSum := arr[0]
+//     maxSum := arr[0]
+//     for i := 1; i < len(arr); i++ {
+//         currentSum = max(arr[i], currentSum + arr[i])
+//         maxSum = max(maxSum, currentSum)
+//     }
+//     return maxSum
+// }
+
+// func max(a, b int) int {
+//     if a > b {
+//         return a
+//     }
+//     return b
+// }
