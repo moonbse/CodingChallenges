@@ -19,6 +19,9 @@
 #include <sstream>
 using namespace std;
 
+// Reached three boundary solution on my own, but should have thought harder, dutch national flag algorithm, just place 0s and 2s right and 1s will be sorted on their own
+
+
 class Solution {
 public:
 
