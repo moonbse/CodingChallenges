@@ -30,9 +30,10 @@ public:
     
         int low = 0 , mid = 0;
         int high = nums.size()-1;
-        
+
 
         // cout << high << "\n";
+        
 
         while(mid <= high){
 
