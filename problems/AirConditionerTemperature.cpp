@@ -22,6 +22,8 @@
 using namespace std;
 #define fastio ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
 
+
+
 template<typename T>
 void print_old(vector<T>vec){
     for(int i=0; i< vec.size(); i++)
